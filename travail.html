@@ -8,8 +8,8 @@
 </head>
 <body class="bg-gray-50">
 
-    <header class="bg-blue-600 text-white p-4 text-center">
-        <a href="index.html" class="text-sm absolute left-4">← Home</a>
+    <header class="bg-blue-600 text-white p-4 text-center relative">
+        <a href="index.html" class="text-sm absolute left-4 top-4">← Home</a>
         <h1 class="text-2xl font-bold">💼 Tous les Jobs UAE en 1 Seul Endroit</h1>
         <p class="text-sm">Économisez du temps. Trouvez le job plus vite.</p>
     </header>
@@ -22,12 +22,11 @@
             <button class="bg-blue-600 text-white px-6 py-3 rounded-lg mt-3 w-full font-bold">Recher</button>
         </div>
 
-        <!-- SOURCES DE JOBS -->
         <p class="text-center text-gray-500 mb-4">Jobs mis à jour depuis : Indeed • Bayt • LinkedIn • Dubizzle • Naukrigulf</p>
 
-        <!-- BLOC INDEED -->
+        <!-- JOBS GRATUITS : 3 PREMIERS -->
         <div class="bg-white p-5 rounded-2xl shadow-md mb-4">
-            <h3 class="font-bold text-lg flex items-center"><img src="https://logo.clearbit.com/indeed.com" class="w-6 mr-2"> Indeed UAE</h3>
+            <h3 class="font-bold text-lg">Indeed UAE</h3>
             <div class="mt-3 space-y-3">
                 <div class="border-b pb-2">
                     <p class="font-bold">Warehouse Staff</p>
@@ -42,37 +41,36 @@
             </div>
         </div>
 
-        <!-- BLOC BAYT -->
-        <div class="bg-white p-5 rounded-2xl shadow-md mb-4">
-            <h3 class="font-bold text-lg flex items-center"><img src="https://logo.clearbit.com/bayt.com" class="w-6 mr-2"> Bayt.com</h3>
-            <div class="mt-3 space-y-3">
-                <div class="border-b pb-2">
-                    <p class="font-bold">Sales Executive</p>
+        <!-- JOBS BLOQUES -->
+        <div class="relative">
+            <div class="blur-sm pointer-events-none">
+                <div class="bg-white p-5 rounded-2xl shadow-md mb-4">
+                    <h3 class="font-bold text-lg">Bayt.com</h3>
+                    <p class="font-bold mt-2">Sales Executive</p>
                     <p class="text-sm text-gray-600">Sharjah • 5000 AED + Commission</p>
-                    <a href="https://www.bayt.com" target="_blank" class="text-blue-600 text-sm font-bold">Voir sur Bayt →</a>
                 </div>
-            </div>
-        </div>
-
-        <!-- BLOC DUBIZZLE -->
-        <div class="bg-white p-5 rounded-2xl shadow-md mb-4">
-            <h3 class="font-bold text-lg flex items-center"><img src="https://logo.clearbit.com/dubizzle.com" class="w-6 mr-2"> Dubizzle Jobs</h3>
-            <div class="mt-3 space-y-3">
-                <div class="border-b pb-2">
-                    <p class="font-bold">Delivery Bike Rider</p>
+                <div class="bg-white p-5 rounded-2xl shadow-md mb-4">
+                    <h3 class="font-bold text-lg">Dubizzle Jobs</h3>
+                    <p class="font-bold mt-2">Delivery Bike Rider</p>
                     <p class="text-sm text-gray-600">All UAE • 3000 AED + Tips</p>
-                    <a href="https://dubai.dubizzle.com/jobs" target="_blank" class="text-blue-600 text-sm font-bold">Voir sur Dubizzle →</a>
+                </div>
+                <div class="bg-white p-5 rounded-2xl shadow-md mb-4">
+                    <h3 class="font-bold text-lg">LinkedIn</h3>
+                    <p class="font-bold mt-2">Accountant</p>
+                    <p class="text-sm text-gray-600">Dubai • 8000 AED</p>
                 </div>
             </div>
-        </div>
 
-        <!-- BLOC PAYWALL -->
-        <div class="bg-yellow-100 border-2 border-yellow-400 p-6 rounded-2xl text-center mt-8">
-            <h3 class="text-xl font-bold">🔒 Débloquez tous les jobs</h3>
-            <p class="mt-2">Accès illimité à +5000 offres mises à jour chaque jour</p>
-            <button class="bg-green-600 text-white px-8 py-3 rounded-lg text-lg font-bold mt-4">
-                S'abonner pour 39 AED / mois
-            </button>
+            <!-- PAYWALL PAR DESSUS -->
+            <div class="absolute inset-0 flex items-center justify-center bg-white bg-opacity-80 rounded-2xl">
+                <div class="bg-yellow-100 border-2 border-yellow-400 p-6 rounded-2xl text-center shadow-2xl">
+                    <h3 class="text-xl font-bold">🔒 +2847 Jobs Bloqués</h3>
+                    <p class="mt-2">Débloquez l'accès complet pour voir tous les jobs</p>
+                    <button class="bg-green-600 text-white px-8 py-3 rounded-lg text-lg font-bold mt-4">
+                        S'abonner pour 39 AED / mois
+                    </button>
+                </div>
+            </div>
         </div>
 
     </div>
