@@ -1,15 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head><meta charset="UTF-8"><title>UAE Helper IA</title>
-<style>body{background:#0f172a;color:white;font-family:Arial;padding:20px}.box{max-width:700px;margin:auto;background:#1e293b;padding:20px;border-radius:16px} h1{color:#3b82f6;text-align:center} #chat{height:400px;background:#0f172a;padding:16px;border-radius:12px;overflow-y:auto}.msg{padding:12px;border-radius:12px;margin-bottom:10px;max-width:80%}.user{background:#3b82f6;margin-left:auto;text-align:right}.ai{background:#334155}.row{display:flex;gap:10px} input{flex:1;padding:14px;border:none;border-radius:10px;background:#0f172a;color:white} button{padding:14px;background:#3b82f6;border:none;border-radius:10px;color:white;font-weight:bold}</style>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UAE Helper - Travailler et Vivre aux Émirats</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Arial; background: #f0f4f8; color: #333; }
+    header { background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%); color: white; padding: 60px 20px; text-align: center; }
+    header h1 { font-size: 2.5em; margin-bottom: 10px; }
+    .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s; }
+    .card:hover { transform: translateY(-5px); }
+    .card h2 { color: #1a365d; margin-bottom: 15px; font-size: 1.3em; }
+    .card ul { list-style: none; }
+    .card li { padding: 8px 0; border-bottom: 1px solid #eee; }
+    .emoji { font-size: 2em; margin-bottom: 10px; }
+    footer { text-align: center; padding: 40px 20px; color: #666; }
+  </style>
 </head>
-<body><div class="box"><h1>🇦🇪 UAE Helper IA</h1><div id="chat"><div class="msg ai">Salut! Expert Dubai ici. Pose ta question.</div></div><div class="row"><input id="q" placeholder="Ex: Prix visa Dubai" onkeypress="if(event.key==='Enter')send()"><button onclick="send()">Envoyer</button></div></div>
-<script>
-const KEY = "COLLE_TA_CLE_OPENROUTER_ICI";
-async function send(){
-  const i=document.getElementById('q'),c=document.getElementById('chat'),txt=i.value;if(!txt)return;i.value='';
-  c.innerHTML+=<div class="msg user">${txt}</div>;c.innerHTML+=<div class="msg ai" id="load">...L'IA réfléchit</div>;
-  const r=await fetch("https://openrouter.ai/api/v1/chat/completions",{method:"POST",headers:{"Authorization":"Bearer "+KEY,"Content-Type":"application/json"},body:JSON.stringify({model:"meta-llama/llama-3.1-8b-instruct:free",messages:[{role:"user",content:txt+" Réponds en français pour Dubai UAE."}]})});
-  const d=await r.json();document.getElementById('load').innerHTML=d.choices[0].message.content;
-}
-</script></body></html>
+<body>
+  <header>
+    <h1>🇦🇪 UAE Helper</h1>
+    <p>Tout pour travailler, vivre et voyager aux Émirats Arabes Unis</p>
+  </header>
+
+  <div class="container">
+    <div class="grid">
+      
+      <div class="card">
+        <div class="emoji">💼</div>
+        <h2>Travail aux UAE</h2>
+        <ul>
+          <li>Part time job</li>
+          <li>Connaître ses droits avec l'employeur</li>
+          <li>Vérifier son contrat en ligne</li>
+          <li>Salaire et vacances</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="emoji">🚗</div>
+        <h2>Permis & Fines</h2>
+        <ul>
+          <li>Permis de conduire</li>
+          <li>Vérification des amendes</li>
+          <li>Comment payer ses fines</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="emoji">📑</div>
+        <h2>Les Visas</h2>
+        <ul>
+          <li>Visa touriste : prix, durée</li>
+          <li>Mainland visa</li>
+          <li>Freelance visa</li>
+          <li>Lieu où les faire</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="emoji">🏨</div>
+        <h2>Voyage & Transport</h2>
+        <ul>
+          <li>Hôtels pas chers</li>
+          <li>Commander un taxi en ligne</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>UAE Helper © 2026 - Guide pour les francophones aux Émirats</p>
+  </footer>
+</body>
+</html>
